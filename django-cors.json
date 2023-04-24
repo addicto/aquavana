@@ -1,0 +1,12 @@
+[
+    {
+      "origin": [
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        "https://aquavana-service-xvgreazlxa-uc.a.run.app"
+      ],
+      "method": ["GET"],
+      "responseHeader": ["Content-Type"],
+      "maxAgeSeconds": 3600
+    }
+]
