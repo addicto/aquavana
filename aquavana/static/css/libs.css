@@ -1453,8 +1453,8 @@
     --gl-tooltip-margin: 12px;
     --gl-tooltip-padding: .5em 1em;
     --gl-tooltip-size: 6px;
-    --gl-star-empty: url('../svg/star--empty.svg');
-    --gl-star-full: url('../svg/star--full.svg');
+    --gl-star-empty: url('star--empty.svg');
+    --gl-star-full: url('star--full.svg');
     --gl-star-size: 18px
 }
 

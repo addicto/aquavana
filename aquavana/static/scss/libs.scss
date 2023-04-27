@@ -10,17 +10,26 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
-// base
-@import "base/base";
-@import "base/mixins";
-@import "base/keyframes";
-@import "base/variables";
-@import "global/global";
+// AOS styles
+@import "aos/dist/aos";
 
-// page components
-@import "blocks/common/header";
-@import "blocks/common/page-header";
-@import "blocks/error";
-@import "pages/error/main";
-@import "blocks/common/footer";
-@import "blocks/common/modal";
+// swiper core styles
+@import "swiper/swiper.min";
+
+// swiper fade effect
+@import "swiper/modules/effect-fade/effect-fade";
+
+// baguettebox styles
+@import "baguettebox.js/dist/baguetteBox.min";
+
+// bootstrap grid
+@import "bootstrap/dist/css/bootstrap-grid";
+
+// sweetalert styles
+@import "sweetalert";
+
+// star-rating.js styles
+@import "star-rating";
+
+// pickmeup (datepicker) styles
+@import "pickmeup";

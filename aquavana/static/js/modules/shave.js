@@ -10,14 +10,15 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
-// base
-@import "base/base";
-@import "base/mixins";
-@import "base/keyframes";
-@import "base/variables";
-@import "global/global";
+"use strict";
 
-// page components
-@import "blocks/error";
-@import "pages/error/main-alt";
-@import "blocks/common/modal";
+import shave from 'aquavana/static/js/modules/shave';
+
+function shaveTitle() {
+    const targetElems = document.querySelectorAll('[data-shave="true"]');
+    if (targetElems.length !== 0) {
+        shave('[data-shave="true"]', 60);
+    }
+}
+
+export default shaveTitle;

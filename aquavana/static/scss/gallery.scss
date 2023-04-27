@@ -11,17 +11,16 @@
  * @support         help@merkulov.design
  **/
 // base
-@import "base/base";
-@import "base/mixins";
-@import "base/keyframes";
-@import "base/variables";
-@import "global/global";
+@import "base";
+@import "mixins";
+@import "keyframes";
+@import "variables";
+@import "global";
 
 // page components
-@import "blocks/common/header";
-@import "blocks/common/page-header";
-@import "blocks/accordion";
-@import "pages/faq/main";
-@import "blocks/contact-form";
-@import "blocks/common/footer";
-@import "blocks/common/modal";
+@import "header";
+@import "page-header";
+@import "main";
+@import "pagination";
+@import "footer";
+@import "modal";

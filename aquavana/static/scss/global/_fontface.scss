@@ -10,26 +10,13 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
-// AOS styles
-@import "aos/dist/aos";
+@import "mixins";
+@include font-face("OpenSans", "OpenSans-Regular", 400);
+@include font-face("OpenSans", "OpenSans-SemiBold", 600);
+@include font-face("OpenSans-Bold", "OpenSans-Bold", 700);
+@include font-face("Mulish", "Mulish-Medium", 500);
+@include font-face("Mulish", "Mulish-SemiBold", 600);
+@include font-face("Mulish", "Mulish-Bold", 700);
+@include font-face("Mulish", "Mulish-ExtraBold", 800);
+@include font-face("Mulish", "Mulish-Black", 900);
 
-// swiper core styles
-@import "swiper/swiper.min";
-
-// swiper fade effect
-@import "swiper/modules/effect-fade/effect-fade";
-
-// baguettebox styles
-@import "baguettebox.js/dist/baguetteBox.min";
-
-// bootstrap grid
-@import "bootstrap/dist/css/bootstrap-grid";
-
-// sweetalert styles
-@import "libs/sweetalert";
-
-// star-rating.js styles
-@import "libs/star-rating";
-
-// pickmeup (datepicker) styles
-@import "libs/pickmeup";

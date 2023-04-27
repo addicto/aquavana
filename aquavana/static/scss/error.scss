@@ -10,15 +10,17 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
-"use strict";
+// base
+@import "base";
+@import "mixins";
+@import "keyframes";
+@import "variables";
+@import "global";
 
-import shave from 'shave';
-
-function shaveTitle() {
-    const targetElems = document.querySelectorAll('[data-shave="true"]');
-    if (targetElems.length !== 0) {
-        shave('[data-shave="true"]', 60);
-    }
-}
-
-export default shaveTitle;
+// page components
+@import "header";
+@import "page-header";
+@import "error";
+@import "main";
+@import "footer";
+@import "modal";

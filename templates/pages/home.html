@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,11 +8,11 @@
         <title>Home | Hosteller</title>
         <script id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
         <script src="https://www.youtube.com/player_api"></script>
-        <link rel="stylesheet preload" as="style" href="css/preload.min.css" />
-        <link rel="stylesheet preload" as="style" href="css/icomoon.css" />
-        <link rel="stylesheet preload" as="style" href="css/libs.min.css" />
+        <link rel="stylesheet preload" as="style" href="{% static 'css/preload.css' %}" />
+        <link rel="stylesheet preload" as="style" href="{% static 'css/icomoon.css' %}" />
+        <link rel="stylesheet preload" as="style" href="{% static 'css/libs.min.css' %}" />
 
-        <link rel="stylesheet" href="css/index.min.css" />
+        <link rel="stylesheet" href="{% static 'css/index.min.css' %}" />
     </head>
     <body>
         <header class="header d-flex align-items-center" data-page="home">
@@ -305,8 +306,8 @@
                     </div>
                     <div class="hero_media" data-aos="zoom-in">
                         <picture>
-                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                            <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                         </picture>
                     </div>
                 </div>
@@ -327,8 +328,8 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
                                         <span class="price h4">$18</span>
@@ -358,8 +359,8 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--pricing">
                                         <span class="price h4">$35</span>
@@ -519,8 +520,8 @@
                     </div>
                     <div class="about_media" data-aos="zoom-in">
                         <picture>
-                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                            <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                         </picture>
                         <a class="video-play d-inline-flex align-items-center justify-content-center" href="#">
                             <i class="icon-play icon"></i>
@@ -804,32 +805,32 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                 </div>
                                 <div class="swiper-slide">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                 </div>
                             </div>
@@ -861,11 +862,11 @@
                                     <span class="reviews_slider-slide_guest d-flex align-items-center">
                                         <span class="avatar">
                                             <picture>
-                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                                 <img
                                                     class="lazy"
-                                                    data-src="img/placeholder.jpg"
-                                                    src="img/placeholder.jpg"
+                                                    data-src="{% static 'img/placeholder.jpg' %}"
+                                                    src="{% static 'img/placeholder.jpg' %}"
                                                     alt="media"
                                                 />
                                             </picture>
@@ -895,11 +896,11 @@
                                     <span class="reviews_slider-slide_guest d-flex align-items-center">
                                         <span class="avatar">
                                             <picture>
-                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                                 <img
                                                     class="lazy"
-                                                    data-src="img/placeholder.jpg"
-                                                    src="img/placeholder.jpg"
+                                                    data-src="{% static 'img/placeholder.jpg' %}"
+                                                    src="{% static 'img/placeholder.jpg' %}"
                                                     alt="media"
                                                 />
                                             </picture>
@@ -929,11 +930,11 @@
                                     <span class="reviews_slider-slide_guest d-flex align-items-center">
                                         <span class="avatar">
                                             <picture>
-                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                                 <img
                                                     class="lazy"
-                                                    data-src="img/placeholder.jpg"
-                                                    src="img/placeholder.jpg"
+                                                    data-src="{% static 'img/placeholder.jpg' %}"
+                                                    src="{% static 'img/placeholder.jpg' %}"
                                                     alt="media"
                                                 />
                                             </picture>
@@ -963,11 +964,11 @@
                                     <span class="reviews_slider-slide_guest d-flex align-items-center">
                                         <span class="avatar">
                                             <picture>
-                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                                 <img
                                                     class="lazy"
-                                                    data-src="img/placeholder.jpg"
-                                                    src="img/placeholder.jpg"
+                                                    data-src="{% static 'img/placeholder.jpg' %}"
+                                                    src="{% static 'img/placeholder.jpg' %}"
                                                     alt="media"
                                                 />
                                             </picture>
@@ -997,11 +998,11 @@
                                     <span class="reviews_slider-slide_guest d-flex align-items-center">
                                         <span class="avatar">
                                             <picture>
-                                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                                 <img
                                                     class="lazy"
-                                                    data-src="img/placeholder.jpg"
-                                                    src="img/placeholder.jpg"
+                                                    data-src="{% static 'img/placeholder.jpg' %}"
+                                                    src="{% static 'img/placeholder.jpg' %}"
                                                     alt="media"
                                                 />
                                             </picture>
@@ -1237,19 +1238,19 @@
                         </div>
                         <div class="promo_media" data-aos="fade-up">
                             <picture>
-                                <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                             </picture>
                             <div class="media_card media_card--top" data-aos="fade-left">
                                 <h4 class="media_card-text">This is the perfect hostel for a weekend getaway!</h4>
                                 <div class="media_card-footer d-flex align-items-center">
                                     <span class="avatar">
                                         <picture>
-                                            <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                             <img
                                                 class="lazy"
-                                                data-src="img/placeholder.jpg"
-                                                src="img/placeholder.jpg"
+                                                data-src="{% static 'img/placeholder.jpg' %}"
+                                                src="{% static 'img/placeholder.jpg' %}"
                                                 alt="media"
                                             />
                                         </picture>
@@ -1287,13 +1288,13 @@
                     </div>
                     <div class="gallery_grid d-grid">
                         <div class="gallery_grid-item gallery_grid-item--left" data-aos="zoom-in">
-                            <a href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
+                            <a href="{% static 'img/placeholder.jpg' %}" data-caption="Image caption" data-role="gallery-link">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                    <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                     <img
                                         class="gallery_grid-item_img lazy"
-                                        data-src="img/placeholder.jpg"
-                                        src="img/placeholder.jpg"
+                                        data-src="{% static 'img/placeholder.jpg' %}"
+                                        src="{% static 'img/placeholder.jpg' %}"
                                         alt="media"
                                     />
                                 </picture>
@@ -1322,13 +1323,13 @@
                             </a>
                         </div>
                         <div class="gallery_grid-item" data-aos="zoom-in">
-                            <a href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
+                            <a href="{% static 'img/placeholder.jpg' %}" data-caption="Image caption" data-role="gallery-link">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                    <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                     <img
                                         class="gallery_grid-item_img lazy"
-                                        data-src="img/placeholder.jpg"
-                                        src="img/placeholder.jpg"
+                                        data-src="{% static 'img/placeholder.jpg' %}"
+                                        src="{% static 'img/placeholder.jpg' %}"
                                         alt="media"
                                     />
                                 </picture>
@@ -1357,13 +1358,13 @@
                             </a>
                         </div>
                         <div class="gallery_grid-item gallery_grid-item--right" data-aos="zoom-in">
-                            <a href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
+                            <a href="{% static 'img/placeholder.jpg' %}" data-caption="Image caption" data-role="gallery-link">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                    <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                     <img
                                         class="gallery_grid-item_img lazy"
-                                        data-src="img/placeholder.jpg"
-                                        src="img/placeholder.jpg"
+                                        data-src="{% static 'img/placeholder.jpg' %}"
+                                        src="{% static 'img/placeholder.jpg' %}"
                                         alt="media"
                                     />
                                 </picture>
@@ -1392,13 +1393,13 @@
                             </a>
                         </div>
                         <div class="gallery_grid-item" data-aos="zoom-in">
-                            <a href="img/placeholder.jpg" data-caption="Image caption" data-role="gallery-link">
+                            <a href="{% static 'img/placeholder.jpg' %}" data-caption="Image caption" data-role="gallery-link">
                                 <picture>
-                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
+                                    <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
                                     <img
                                         class="gallery_grid-item_img lazy"
-                                        data-src="img/placeholder.jpg"
-                                        src="img/placeholder.jpg"
+                                        data-src="{% static 'img/placeholder.jpg' %}"
+                                        src="{% static 'img/placeholder.jpg' %}"
                                         alt="media"
                                     />
                                 </picture>
@@ -1445,8 +1446,8 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--left"> Travel </span>
                                 </div>
@@ -1473,8 +1474,8 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--left"> Tourist Guide </span>
                                 </div>
@@ -1503,8 +1504,8 @@
                             <div class="item-wrapper d-md-flex flex-column">
                                 <div class="media">
                                     <picture>
-                                        <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" />
-                                        <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
                                     </picture>
                                     <span class="media_label media_label--left"> Communication </span>
                                 </div>
@@ -1710,14 +1711,14 @@
             <div class="footer_copyright">
                 <div class="container">
                     <p class="footer_copyright-text">
-                        <span class="linebreak">Merkulove &copy; Hosteller Template</span>
-                        <span class="linebreak">All rights reserved Copyrights 2021</span>
+                        <span class="linebreak">Aquavana Haad Rin Resort &copy; Prime Resort Co., Ltd.</span>
+                        <span class="linebreak">All rights reserved Copyrights 2022</span>
                     </p>
                 </div>
             </div>
         </footer>
-        <script src="js/common.min.js"></script>
-        <script src="js/index.min.js"></script>
-        <script src="js/gallery.min.js"></script>
+        <script src="{% static 'js/common.min.js' %}"></script>
+        <script src="{% static 'js/index.min.js' %}"></script>
+        <script src="{% static 'js/gallery.min.js' %}"></script>
     </body>
 </html>

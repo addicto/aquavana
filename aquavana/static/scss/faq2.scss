@@ -10,4 +10,18 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
-@import "global/fontface";
+// base
+@import "base";
+@import "mixins";
+@import "keyframes";
+@import "variables";
+@import "global";
+
+// page components
+@import "header";
+@import "page-header";
+@import "accordion";
+@import "main-alt";
+@import "contact-form";
+@import "footer";
+@import "modal";
