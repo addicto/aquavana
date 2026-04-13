@@ -169,10 +169,8 @@ if is_local_run():
         ),
     }
 else:
+    # Running on Google Cloud Run
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    # print('###########################')
-    # print(BASE_DIR)
-    # print('###########################')
 
     # [START cloudrun_django_secret_config]
     # SECURITY WARNING: don't run with debug turned on in production!

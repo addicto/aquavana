@@ -10,6 +10,11 @@
  * @contributors    Lamber Lilit (winter.rituel@gmail.com)
  * @support         help@merkulov.design
  **/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -116,14 +121,20 @@ html.fixed {
 }
 
 body {
-    font-family: OpenSans,sans-serif;
+    /*font-family: 'Yanone Kaffeesatz',OpenSans,sans-serif;*/
+    /*font-family: 'Noto Sans',OpenSans,sans-serif;*/
+    font-family: 'Roboto',OpenSans,sans-serif;
     color: #2c3c4a;
     line-height: 1.45;
-    font-size: 18px
+    /*font-size: 18px;*/
+    font-size: 1.05rem;
+    font-weight: 300;
 }
 
 .h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6 {
-    font-family: Mulish,sans-serif;
+    /*font-family: Mulish,sans-serif;*/
+    /*font-family: 'Yanone Kaffeesatz',OpenSans,sans-serif;*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
     color: #040b11
 }
 
@@ -152,7 +163,7 @@ body {
 }
 
 .h5,h5 {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.25
 }
 
@@ -179,13 +190,14 @@ a.h1:focus,a.h1:hover,a.h2:focus,a.h2:hover,a.h3:focus,a.h3:hover,a.h4:focus,a.h
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-family: Mulish,sans-serif
+    /*font-family: Mulish,sans-serif*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
 }
 
 .theme-element.btn {
     height: 48px;
     font-weight: 800;
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 1;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -219,7 +231,8 @@ a.h1:focus,a.h1:hover,a.h2:focus,a.h2:hover,a.h3:focus,a.h3:hover,a.h4:focus,a.h
 }
 
 .brand_name {
-    font-family: Mulish,sans-serif;
+    /*font-family: Mulish,sans-serif;*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
     font-weight: 800;
     font-size: 30px
 }
@@ -286,7 +299,8 @@ a.h1:focus,a.h1:hover,a.h2:focus,a.h2:hover,a.h3:focus,a.h3:hover,a.h4:focus,a.h
 .link--arrow {
     color: #235784;
     font-weight: 700;
-    font-family: Mulish,sans-serif;
+    /*font-family: Mulish,sans-serif;*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
     font-size: 16px;
     line-height: 1;
     display: -webkit-inline-box;
@@ -487,7 +501,8 @@ a.h1:focus,a.h1:hover,a.h2:focus,a.h2:hover,a.h3:focus,a.h3:hover,a.h4:focus,a.h
 }
 
 .booking_group-field,.booking_group-field::placeholder {
-    font-size: 16px;
+    font-size: 1.1rem;
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
     line-height: 1;
     color: #2c3c4a
 }
@@ -516,7 +531,8 @@ a.h1:focus,a.h1:hover,a.h2:focus,a.h2:hover,a.h3:focus,a.h3:hover,a.h4:focus,a.h
     padding: 0 15px;
     font-size: 16px;
     font-weight: 700;
-    font-family: Mulish,sans-serif;
+    /*font-family: Mulish,sans-serif;*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
     color: #235784;
     top: 0;
     right: 0;
@@ -762,7 +778,8 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    font-family: Mulish,sans-serif
+    /*font-family: Mulish,sans-serif*/
+    font-family: 'Asap Condensed',OpenSans,sans-serif;
 }
 
 .header_nav-list .nav-item {
@@ -851,7 +868,7 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
     }
 
     .header_nav .nav-item,.header_nav .nav-link {
-        font-size: 16px;
+        font-size: 1.1rem;
         margin-right: 70px;
         position: relative
     }
@@ -1312,7 +1329,7 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
     }
 
     .hero_main .booking {
-        min-width: 850px
+        min-width: 620px
     }
 
     .hero_main .booking .item-wrapper {
@@ -1321,21 +1338,21 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
         justify-content: flex-start
     }
 
-    .hero_main .booking_group {
-        width: 200px
-    }
+    /*.hero_main .booking_group {*/
+    /*    width: 200px*/
+    /*}*/
 
     .hero_main .booking_group:first-of-type {
         width: 230px
     }
 
     .hero_main .booking_group:last-of-type {
-        width: 260px
+        width: 230px
     }
 
-    .hero_main .booking_group:last-of-type .booking_group-wrapper {
-        width: unset
-    }
+    /*.hero_main .booking_group:last-of-type .booking_group-wrapper {*/
+    /*    width: unset*/
+    /*}*/
 
     .hero_main .booking_group-wrapper {
         width: 140px
@@ -2481,9 +2498,9 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
 }
 
 .footer_copyright {
-    font-size: 16px;
+    font-size: 0.85rem;
     line-height: 1.4;
-    padding: 30px 0;
+    padding: 20px 0;
     text-align: center;
     background: #f7fafd;
     color: #2c3c4a

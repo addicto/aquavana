@@ -135,6 +135,12 @@ export function applyDatepicker() {
             pickmeupDepartureInstance.update();
             departureDate.style.pointerEvents = 'unset';
         });
+
+
+        arrivalDate.addEventListener('pickmeup-show', function (e) {
+            console.log(e)
+            // e.preventDefault(); // Showing can be canceled if needed
+        })
     }
 
 }
