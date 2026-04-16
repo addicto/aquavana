@@ -14,3 +14,8 @@ after completing [Part 1](https://docs.djangoproject.com/en/3.2/intro/tutorial01
 
 # Tutorial
 See our [Running Django on Cloud Run (fully managed)](https://cloud.google.com/python/django/run) tutorial for instructions for setting up and deploying this sample application.
+
+
+
+https://github.com/affaan-m/everything-claude-code
+> /frontend-design:frontend-design
