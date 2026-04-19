@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import io
 import os
-import platform
-import sys
 
 import environ
 import google.auth
@@ -22,15 +20,13 @@ from pathlib import Path
 from google.cloud import secretmanager
 from django.contrib.messages import constants as messages
 from google.oauth2 import service_account
-from django.contrib.messages import constants as messages
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 ALLOWED_HOSTS = ["*"]
 
 
 def is_local_run():
-    return (os.getenv('DJANGO_DEVELOPMENT', False) == 'true' or not os.getenv("USE_CLOUD_SQL_AUTH_PROXY", False)) \
-        and platform.system().lower() == 'darwin'
+    return os.getenv('DJANGO_DEVELOPMENT', 'false') == 'true'
 
 
 if is_local_run():
@@ -60,6 +56,7 @@ if is_local_run():
         "storages",
         # 'widget_tweaks',
         "aquavana",
+        "pages",
         # reversion -- https://django-reversion.readthedocs.io/en/stable/api.html
         # 'reversion',
         # templates
@@ -105,9 +102,11 @@ if is_local_run():
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'aquavana',
-            'HOST': 'localhost',
-            'POST': '5432',
+            'NAME': os.getenv('DB_NAME', 'aquavana'),
+            'USER': os.getenv('DB_USER', 'atthachet'),
+            'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
+            'HOST': os.getenv('DB_HOST', 'localhost'),
+            'PORT': os.getenv('DB_PORT', '5432'),
         },
     }
 
@@ -229,6 +228,7 @@ else:
         "storages",
         # 'widget_tweaks',
         "aquavana",
+        "pages",
         # reversion -- https://django-reversion.readthedocs.io/en/stable/api.html
         # 'reversion',
         # templates
@@ -309,9 +309,8 @@ else:
     # [START cloudrun_django_static_config]
     # Define static storage via django-storages[google]
     GS_BUCKET_NAME = env("GS_BUCKET_NAME")
-    # GS_BUCKET_NAME = 'accounting-bucket'
     GS_PROJECT_ID = 'dev-server-330909'
-    # STATIC_ROOT = 'static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
     STATIC_URL = "/static/"
     STATICFILES_DIRS = [
         # add other static folders

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -354,8 +355,7 @@
   <!-- Header -->
   <header>
     <a class="brand" href="#">
-      <!-- When served via Django, replace src with {% static 'img/aq_logo.png' %} -->
-      <img class="brand-icon" src="../aquavana/static/img/aq_logo.png" alt="Aquavana">
+      <img class="brand-icon" src="{% static 'img/aq_logo.png' %}" alt="Aquavana">
     </a>
   </header>
 
@@ -631,8 +631,16 @@
     }
 
     // TODO: wire to your actual backend / mailing list
-    // e.g. fetch('/api/notify/', { method:'POST', body: JSON.stringify({email}), ... })
-    console.log('Notify signup:', email);
+    fetch('/notify/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    })
+    .then(r => r.json())
+    .then(data => {
+      if (data.error) throw new Error(data.error);
+    })
+    .catch(() => {});
 
     row.style.display = 'none';
     msg.style.display = 'block';

@@ -1,3 +1,8 @@
 from django.contrib import admin
+from pages.models import NotifySignup
 
-# Register your models here.
+
+@admin.register(NotifySignup)
+class NotifySignupAdmin(admin.ModelAdmin):
+    list_display = ('email', 'created_at')
+    ordering = ('-created_at',)

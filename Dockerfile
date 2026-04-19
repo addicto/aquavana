@@ -14,7 +14,7 @@
 
 # Use an official lightweight Python image.
 # https://hub.docker.com/_/python
-FROM python:3.14
+FROM python:3.14-slim
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
@@ -24,7 +24,8 @@ ENV PYTHONUNBUFFERED 1
 
 # Install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Copy local code to the container image.
 COPY . .

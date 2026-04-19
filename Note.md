@@ -10,7 +10,7 @@
 ## How to run
 
 #### Start the Cloud SQL Auth proxy (using new terminal):
-> ./cloud_sql_proxy -instances="dev-server-330909:us-central1:dev-server-postgres-13"=tcp:5432 
+> ./cloud_sql_proxy -instances="dev-server-330909:us-central1:prod-db-primary"=tcp:5432 
 
 #### Set up Cloud SQL connection (using new terminal):
 ###### MacOS
@@ -40,25 +40,25 @@
 ## Creating Google Cloud - Django
 
 Create the PostgreSQL instance:
-> gcloud sql instances create dev-server-postgres-13 \
+> gcloud sql instances create prod-db-primary \
     --project dev-server-330909 \
     --database-version POSTGRES_13 \
     --tier db-f1-micro \
     --region us-central1 
->>  instance-name: dev-server-postgres-13 \
+>>  instance-name: prod-db-primary \
     region: us-central1 \
     project-id: dev-server-330909
 
 Create the database within the recently created instance:
 > gcloud sql databases create aquavana \
-    --instance dev-server-postgres-13
+    --instance prod-db-primary
 >>  sql-database-name: aquavana 
 
 Create the user within the recently created instance:
 > gcloud sql users create atthachet \
-    --instance dev-server-postgres-13 \
+    --instance prod-db-primary \
     --password ArM1234
->>  instance-name: dev-server-postgres-13 \
+>>  instance-name: prod-db-primary \
     username: atthachet \
     password: ArM1234 
 
@@ -69,7 +69,7 @@ Create a Cloud Storage bucket:
 
 
 Create a file called .env, defining the database connection string, the media bucket name, and a new SECRET_KEY value:
-> echo DATABASE_URL=postgres://atthachet:ArM1234@//cloudsql/dev-server-330909:us-central1:dev-server-postgres-13/aquavana > .env
+> echo DATABASE_URL=postgres://atthachet:ArM1234@//cloudsql/dev-server-330909:us-central1:prod-db-primary/aquavana > .env
 
 > echo GS_BUCKET_NAME=dev-server-330909_aquavana-bucket >> .env
 
@@ -87,7 +87,7 @@ To confirm the creation of the secret, check it:
       automatic: {} 
 
 > gcloud secrets versions access latest --secret aquavana_settings
->>  DATABASE_URL=postgres://atthachet:ArM1234@//cloudsql/dev-server-330909:us-central1:dev-server-postgres-13/aquavana-db \
+>>  DATABASE_URL=postgres://atthachet:ArM1234@//cloudsql/dev-server-330909:us-central1:prod-db-primary/aquavana-db \
     GS_BUCKET_NAME=dev-server-330909_aquavana-bucket \
     SECRET_KEY=SBfWLkCVDAIxCqsGTXxtisfdeVYcivFLzIrLgOcWdSeIbPsOKU
 
@@ -132,7 +132,7 @@ View CORS settings
 ### Running Django - Local
 
 *** Start the Cloud SQL Auth proxy:
-> ./cloud_sql_proxy -instances="dev-server-330909:us-central1:dev-server-postgres-13"=tcp:5432
+> ./cloud_sql_proxy -instances="dev-server-330909:us-central1:prod-db-primary"=tcp:5432
 
 Set the Project ID locally (used by the Secret Manager API):
 > export GOOGLE_CLOUD_PROJECT=dev-server-330909
@@ -158,16 +158,16 @@ Start the Django web server:
 
 Using the supplied cloudmigrate.yaml, use Cloud Build to build the image, run the database migrations, and populate the static assets:
 > gcloud builds submit --config cloudmigrate.yaml \
-    --substitutions _INSTANCE_NAME=dev-server-postgres-13,_REGION=us-central1
+    --substitutions _INSTANCE_NAME=prod-db-primary,_REGION=us-central1
 
 When the build is successful, deploy the Cloud Run service for the first time, setting the service region, base image, and connected Cloud SQL instance:
-> gcloud run deploy aquavana-service     --platform managed     --region us-central1     --image gcr.io/dev-server-330909/aquavana-service     --add-cloudsql-instances dev-server-330909:us-central1:dev-server-postgres-13     --allow-unauthenticated
+> gcloud run deploy aquavana-service     --platform managed     --region us-central1     --image gcr.io/dev-server-330909/aquavana-service     --add-cloudsql-instances dev-server-330909:us-central1:prod-db-primary     --allow-unauthenticated
 
 
 ### Updating - Deploy the app to Cloud Run
 
 Updating the application:
-> gcloud builds submit --config cloudmigrate.yaml --substitutions _INSTANCE_NAME=dev-server-postgres-13,_REGION=us-central1
+> gcloud builds submit --config cloudmigrate.yaml --substitutions _INSTANCE_NAME=prod-db-primary,_REGION=us-central1
 
 Deploy the service, specifying only the region and image:
 > gcloud run deploy aquavana-service --platform managed --region us-central1 --image gcr.io/dev-server-330909/aquavana-service
@@ -179,4 +179,4 @@ Deploy the service, specifying only the region and image:
 
 
 Start a connection to the SQL instance:
-> gcloud sql connect dev-server-postgres-13 --user postgres
+> gcloud sql connect prod-db-primary --user postgres

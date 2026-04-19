@@ -14,13 +14,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path
+from django.views.generic import TemplateView
 
-from aquavana import settings
+from pages.views import notify_signup
+
+coming_soon = TemplateView.as_view(template_name='coming_soon.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')),
-] ## + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('notify/', notify_signup),
+    re_path(r'^.*$', coming_soon),
+]

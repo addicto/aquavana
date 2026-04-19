@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgres:18-alpine
+    container_name: aquavana_db
+    environment:
+      POSTGRES_DB: aquavana
+      POSTGRES_USER: atthachet
+      POSTGRES_PASSWORD: password
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    container_name: aquavana_web
+    volumes:
+      - .:/app
+    ports:
+      - "8999:8000"
+    environment:
+      - DJANGO_DEVELOPMENT=true
+      - DB_HOST=db
+      - DB_USER=atthachet
+      - DB_PASSWORD=password
+    command: >
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
