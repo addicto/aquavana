@@ -326,9 +326,9 @@ else:
     MEDIA_URL = "/media/"
     # Add an unique ID to a file name if same file name exists
     GS_FILE_OVERWRITE = False
-    GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
-        os.path.join(BASE_DIR, 'gcs_credentials.json'),
-    )
+    # GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
+    #     os.path.join(BASE_DIR, 'gcs_credentials.json'),
+    # )
 
     # Collect static files on local storages
     if BASE_DIR.find('atthachet') > -1 or BASE_DIR.find('Developer') > -1:
